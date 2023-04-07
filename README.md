@@ -796,7 +796,7 @@ if __name__ == "__main__":
 ```
 
 1. [main.py](http://main.py) 코드의 extra_files가 참조하는 인증서 파일이 vault agent에 의해 자동으로 갱신되어 인증서를 120초마다 다시 읽어온다. 
-2. 인증서를 읽어보면 유효기간이 2분마다 갱신됨을 확인할 수 있다.
+2. 인증서 확인
 
 ```go
 openssl x509 -in service-a.crt -noout -text
@@ -806,3 +806,4 @@ Validity
             Not After : Apr  3 08:48:26 2023 GMT
 ...
 ```
+ttl=2m 인데 유효기간이 2분30초인 이유 ?
